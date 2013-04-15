@@ -23,8 +23,7 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
-
+<?php require $_GET['page'].'.php';?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="assets/js/plugins.js"></script>
