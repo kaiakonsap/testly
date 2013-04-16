@@ -31,5 +31,4 @@ class Request
 }
 
 $request = new Request;
-print_r($request);
-die();
+
