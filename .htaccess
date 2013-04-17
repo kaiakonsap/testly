@@ -2,7 +2,7 @@ RewriteEngine On
 
 RewriteBase /testly/
 
-RewriteRule ^(application|modules|system) - [F,L]
+RewriteRule ^(classes) - [F,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
