@@ -3,13 +3,13 @@
 class Request
 {
 	public $controller;
-	public $action = 'index';
+	public $action = DEFAULT_CONTROLLER;
 	public $params = array();
 //here I construct(=give values to)my previously defined 3 attributes
 	public function __construct()
 	{
 		//if my server sends me any info from address bar
-		if (isset($_SERVER ['PATH_INFO'])) {
+		if (isset($_SERVER['PATH_INFO'])) {
 			//take it apart, disjoint using "/" sign and put it into variable $path_info
 			if ($path_info = explode('/', $_SERVER['PATH_INFO'])) {
 
@@ -22,8 +22,13 @@ class Request
 				$this->controller = isset($path_info[0]) ? array_shift($path_info) : 'welcome';
 				$this->action = isset($path_info[0]) && ! empty ($path_info[0]) ? array_shift($path_info) : 'index';
 				$this->params = isset($path_info[0]) ? $path_info : NULL;
+
 			}
 		}
+		}
+	public function redirect($destination)
+	{
+		header('Location:'.BASE_URL.$destination);
 	}
 }
 //make a new instance of mu class that carries all the attributes defined above
