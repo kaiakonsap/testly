@@ -13,14 +13,14 @@ class user
 			$this->logged_in = TRUE;
 		}
 	}
-//the authentication function with global variable  $_REQUEST
+//the authentication function with global variable  $request
 	public function require_auth()
 	{
-		global $_REQUEST;
+		global $request;
 		//if logged_in variable is NOT true
 		if ($this->logged_in !== TRUE) {
 			//check if both of there two things exist and equal to whatever 'XMLHttpRequest' is????????
-			if (isset($_SERVER['HTTP_X_REQUESTED_WIDTH']) && $_SERVER['HTTP_X_REQUESTED_WIDTH'] == 'XMLHttpRequest')
+			if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest')
 			{
 				//set the "header"?????? of a html to to have 'HTTP/1.0 401 Unauthorized'
 				header('HTTP/1.0 401 Unauthorized');
@@ -30,7 +30,7 @@ class user
 			//else expire my SESSION and redirect to auth controller
 			else {
 				$_SESSION['session_expired'] = TRUE;
-				$_REQUEST->redirect('auth');
+				$request->redirect('auth');
 			}
 		}
 

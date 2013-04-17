@@ -2,9 +2,11 @@
 //my class "Request"  that has 3 public attributes
 class Request
 {
-	public $controller;
-	public $action = DEFAULT_CONTROLLER;
+
+	public $controller = DEFAULT_CONTROLLER;
+	public $action = 'index';
 	public $params = array();
+
 //here I construct(=give values to)my previously defined 3 attributes
 	public function __construct()
 	{
@@ -25,12 +27,14 @@ class Request
 
 			}
 		}
-		}
+	}
+
 	public function redirect($destination)
 	{
-		header('Location:'.BASE_URL.$destination);
+		header('Location: '.BASE_URL.$destination);
 	}
 }
+
 //make a new instance of mu class that carries all the attributes defined above
 $request = new Request;
 
