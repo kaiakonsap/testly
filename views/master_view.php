@@ -16,6 +16,12 @@
 	    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/main.css">
         <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+	    <style>
+		    body
+		    {
+			padding-top:60px;
+		    }
+	    </style>
     </head>
     <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -38,7 +44,7 @@
 	    </div>
     </div>
 	<?php
-	global $request;
+
 	require '/views/'.$request->controller.'_'.$request->action.'_view.php';?>
 
 
