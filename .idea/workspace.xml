@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9323f6b8-decd-4307-b963-f3dcfe588164" name="define('BASE_URL','/testly/');" comment="Add .gitignore, change rewriterule">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Request.php" afterPath="$PROJECT_DIR$/classes/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/auth.php" afterPath="$PROJECT_DIR$/controllers/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/auth_view.php" afterPath="$PROJECT_DIR$/views/auth_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/database.php" afterPath="$PROJECT_DIR$/classes/database.php" />
+    <list default="true" id="9323f6b8-decd-4307-b963-f3dcfe588164" name="define('BASE_URL','/testly/');" comment="Fix missing background bug #48236877 started #48238383">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/tests_index_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/master_view.php" afterPath="$PROJECT_DIR$/views/master_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tests.php" afterPath="$PROJECT_DIR$/controllers/tests.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/user.php" afterPath="$PROJECT_DIR$/classes/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="c98550a8-de1b-4522-8e64-34a3fe31b268" name="ignore" comment="">
@@ -18,12 +11,12 @@
     </list>
     <ignored path="testly.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9323f6b8-decd-4307-b963-f3dcfe588164" time="1366199214169" ignored="false" />
+    <file path="/Dummy.txt" changelist="9323f6b8-decd-4307-b963-f3dcfe588164" time="1366202730130" ignored="false" />
     <file path="/Request.php" changelist="4f1f8d22-7c64-45a7-8cd2-625c6f8428e6" time="1366019672796" ignored="false" />
     <file path="/test.php" changelist="4f1f8d22-7c64-45a7-8cd2-625c6f8428e6" time="1366018881515" ignored="false" />
     <file path="/index.php" changelist="4f1f8d22-7c64-45a7-8cd2-625c6f8428e6" time="1366018719359" ignored="false" />
     <file path="/auth_view.php" changelist="9323f6b8-decd-4307-b963-f3dcfe588164" time="1366200555505" ignored="false" />
-    <file path="/master_view.php" changelist="9323f6b8-decd-4307-b963-f3dcfe588164" time="1366201817261" ignored="false" />
+    <file path="/master_view.php" changelist="9323f6b8-decd-4307-b963-f3dcfe588164" time="1366203448979" ignored="false" />
     <file path="/tests.php" changelist="9323f6b8-decd-4307-b963-f3dcfe588164" time="1366202100055" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth_view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="auth_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/auth_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="374" selection-end="374" vertical-scroll-proportion="0.3384913">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -98,10 +91,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master_view.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="master_view.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/master_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="54" selection-start="1466" selection-end="1466" vertical-scroll-proportion="-3.7586207">
+            <state line="32" column="46" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.30367506">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests_index_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/tests_index_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -155,8 +157,8 @@
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/classes/Request.php" />
         <option value="$PROJECT_DIR$/controllers/tests.php" />
-        <option value="$PROJECT_DIR$/views/master_view.php" />
         <option value="$PROJECT_DIR$/views/auth_view.php" />
+        <option value="$PROJECT_DIR$/views/master_view.php" />
       </list>
     </option>
   </component>
@@ -349,7 +351,11 @@
       <created>1366189957970</created>
       <updated>1366189957970</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix missing background bug #48236877 started #48238383">
+      <created>1366202790077</created>
+      <updated>1366202790077</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers>
       <PivotalTracker shared="false" url="http://www.pivotaltracker.com">
         <option name="APIKey" value="51f0d8fac0132d32ce4ffe334774a789" />
@@ -368,6 +374,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31848186" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -382,7 +389,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -393,7 +399,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
       <value>
@@ -430,7 +436,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore, change rewriterule" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix missing background bug #48236877 started #48238383" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -449,16 +455,12 @@
     <MESSAGE value="Add a lot of comments" />
     <MESSAGE value="Add get one function, DEFAULT CONTROLLER, new base url, tests class submit button" />
     <MESSAGE value="Add .gitignore, change rewriterule" />
+    <MESSAGE value="Fix missing background bug #48236877 started #48238383" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="0" selection-start="3751" selection-end="3751" vertical-scroll-proportion="0.3513011" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/json.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="9" selection-start="756" selection-end="756" vertical-scroll-proportion="0.3502825" />
@@ -540,16 +542,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/master_view.php">
+    <entry file="file://$PROJECT_DIR$/views/auth_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="54" selection-start="1466" selection-end="1466" vertical-scroll-proportion="-3.7586207">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/auth_view.php">
+    <entry file="file://$PROJECT_DIR$/views/tests_index_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="374" selection-end="374" vertical-scroll-proportion="0.3384913">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/master_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="46" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.30367506">
           <folding />
         </state>
       </provider>

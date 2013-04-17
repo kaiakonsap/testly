@@ -29,15 +29,17 @@
 			    <a class="brand" href="#">Project name</a>
 			    <div class="nav-collapse collapse">
 				    <ul class="nav">
-					    <li class="active"><a href="<?=URL::base()?>tests">Home</a></li>
-					    <li><a href="#">About</a></li>
-					    <li><a href="#">Contact</a></li>
+					    <li class="active"><a href="<?=BASE_URL ?>tests">Home</a></li>
+					    <li><a href="<?= BASE_URL?>auth/logout">Logi välja</a></li>
+					  <!--  <li><a href="<?=BASE_URL ?>tests">Contact</a></li>-->
 				    </ul>
 			    </div><!--/.nav-collapse -->
 		    </div>
 	    </div>
     </div>
-	<?php require '/views/'.$request->controller.'_'.$request->action.'_view.php';?>
+	<?php
+	global $request;
+	require '/views/'.$request->controller.'_'.$request->action.'_view.php';?>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
