@@ -6,26 +6,21 @@ mysql_select_db(DATABASE_DATABASE)or mysql_error();
 mysql_query("SET NAMES 'utf8");
 mysql_query("SET CHARACTER 'utf8");
 
-function q($sql, $debug = FALSE)
-{
-	if ($debug) {
-		print "<pre>$sql</pre>";
-	}
-}
-
+//this function makes sure if my mysql query had any results, it gets a query data from auth.php
 function get_one($sql, $debug = FALSE)
 {
+
 	if ($debug) {
 		print "<pre>$sql</pre>";
 	}
+	//make query with $sql data or give an error
 	$q = mysql_query($sql) or exit(mysql_error());
+	//if no rows in my query die
 	if (mysql_num_rows($q) === FALSE) {
 		die($sql);
 	}
+	//save a row into my variable
 	$result = mysql_fetch_row($q);
-	if (is_array($result) && count($result) > 0) {
-		return $result[0];
-	}
-	return NULL;
+	//if my variable is a array and has  more than 0 members return the first member else give NULL=none
 	return (is_array($result)) && count($result) > 0 ? $result[0] : NULL;
 }

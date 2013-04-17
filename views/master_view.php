@@ -37,14 +37,15 @@
 				    <ul class="nav">
 					    <li class="active"><a href="<?=BASE_URL ?>tests">Home</a></li>
 					    <li><a href="<?= BASE_URL?>auth/logout">Logi välja</a></li>
-					  <!--  <li><a href="<?=BASE_URL ?>tests">Contact</a></li>-->
+					  <!--  <li><a href="<?//=BASE_URL ?>tests">Contact</a></li>-->
 				    </ul>
 			    </div><!--/.nav-collapse -->
 		    </div>
 	    </div>
     </div>
 	<?php
-
+	/*Ask controller and action attribute from my $request instance, glue it an " _view.php" ending and
+	merge a view file with that name*/
 	require '/views/'.$request->controller.'_'.$request->action.'_view.php';?>
 
 
