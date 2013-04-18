@@ -2,6 +2,7 @@
 //class tests
 class tests
 {
+
 //this will be useful somewhere ??????
 	public $requires_auth = TRUE;
 

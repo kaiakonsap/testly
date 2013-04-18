@@ -13,8 +13,7 @@
 		body {
 			padding-top: 40px;
 			padding-bottom: 40px;
-			background-color: #f5f5f5;
-			background-image:url("assets/img/back.jpg");
+			background: #f5f5f5 url("assets/img/back.jpg");
 		}
 
 		.form-signin {
@@ -27,14 +26,16 @@
 			-webkit-border-radius: 5px;
 			-moz-border-radius: 5px;
 			border-radius: 5px;
-			-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-			-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-			box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+			-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+			box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
 		}
+
 		.form-signin .form-signin-heading,
 		.form-signin .checkbox {
 			margin-bottom: 10px;
 		}
+
 		.form-signin input[type="text"],
 		.form-signin input[type="password"] {
 			font-size: 16px;
@@ -68,7 +69,8 @@
 		<button class="btn btn-large btn-primary" type="submit">Logi sisse</button>
 	</form>
 
-</div> <!-- /container -->
+</div>
+<!-- /container -->
 
 
 </body>
