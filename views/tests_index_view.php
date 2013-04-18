@@ -8,11 +8,14 @@
 	<th>Tegevused</th>
 	</thead>
 	<tbody>
-<tr>
-	<td>test1</td>
-	<td>buduaar</td>
-	<td>2011-09-22</td>
+	<?if (!empty($tests)):foreach($tests as $test):?>
+<tr id="test"><?=$test['test_id']?>>
+	<td><?=$test['name']?></td>
+	<td><?=$test['username']?></td>
+	<td><?=$test['date']?></td>
 	<td><?="vasta"?> <i class="icon-pencil"></i> </td>
-	</tbody>
 </tr>
+	<?endforeach;endif?>
+	</tbody>
+
 </table>

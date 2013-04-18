@@ -9,7 +9,6 @@ mysql_query("SET CHARACTER 'utf8");
 //this function makes sure if my mysql query had any results, it gets a query data from auth.php
 function get_one($sql, $debug = FALSE)
 {
-
 	if ($debug) {
 		print "<pre>$sql</pre>";
 	}
@@ -23,4 +22,15 @@ function get_one($sql, $debug = FALSE)
 	$result = mysql_fetch_row($q);
 	//if my variable is a array and has  more than 0 members return the first member else give NULL=none
 	return (is_array($result)) && count($result) > 0 ? $result[0] : NULL;
+}
+
+
+function get_all($sql)
+{
+	$q = mysql_query($sql) or exit(mysql_error());
+	while (($result[] = mysql_fetch_assoc($q)) || array_pop($result))
+	{
+;
+	}
+	return $result;
 }
