@@ -20,10 +20,22 @@
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
 	<style>
-		body {
+		body
+		{
 			padding-top: 60px;
 		}
+		body,html
+		{
+			background:url('<?=BASE_URL?>assets/img/back.jpg');
+			height: 100%;
+
+		}
+		table.table-bordered tr
+		{
+			background-color: #f9f9f9;
+		} ;
 	</style>
 </head>
 <body>

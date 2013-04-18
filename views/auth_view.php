@@ -13,7 +13,7 @@
 		body {
 			padding-top: 40px;
 			padding-bottom: 40px;
-			background: #f5f5f5 url("assets/img/back.jpg");
+
 		}
 
 		.form-signin {
