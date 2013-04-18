@@ -14,7 +14,7 @@ if (file_exists('controllers/'.$request->controller.'.php')) {
 	if (isset($controller->requires_auth)) {
 		$_user->require_auth();
 	}
-	//use the method that you got from action's attribute name
+	//use the method(that exists in that controller file) that you got from action's attribute name
 	$controller->{$request->action}();
 	//else say that no page with that kind of a controller name does not exist
 } else {

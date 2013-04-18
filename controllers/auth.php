@@ -25,7 +25,7 @@ class auth
 			if (! empty($user_id)) {
 				//make my $_SESSION have this users user_id and
 				$_SESSION['user_id'] = $user_id;
-				//redirect my user to a new view, but from request?????????????
+				//redirect my user to a new view
 				$request->redirect('tests');
 			}
 			//if my user doesn't get redirected have an error

@@ -28,7 +28,7 @@ class Request
 			}
 		}
 	}
-
+//redirect my user to base url + $destination location
 	public function redirect($destination)
 	{
 		header('Location: '.BASE_URL.$destination);

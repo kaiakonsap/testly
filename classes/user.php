@@ -26,7 +26,7 @@ class user
 			if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
 				//set the "header"?????? of a html to to have 'HTTP/1.0 401 Unauthorized'
 				header('HTTP/1.0 401 Unauthorized');
-				//exit.....?? set 'session_expired' to be an array value in json_encode funtionor something like that
+				//exit.....?? set 'session_expired' to be an array value in json_encode function something like that
 				exit(json_encode(array('data' => 'session_expired')));
 			} //else expire my SESSION and redirect to auth controller
 			else {
