@@ -16,5 +16,13 @@ class tests
 		//merge master view which decides which body to put
 		require 'views/master_view.php';
 	}
+	function remove()
+	{
+	global 	$request;
+
+		$id=$request->params[0];
+		$result=q("UPDATE test SET deleted=1 WHERE test_id='$id'");
+		require 'views/master_view.php';
+	}
 
 }
