@@ -1,4 +1,4 @@
 <?php
 ob_end_clean();
-echo $result ? "OK":"FAIL";
+echo $result ? 'OK' : 'FAIL';
 die();

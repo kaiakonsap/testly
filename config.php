@@ -6,3 +6,5 @@ define('DATABASE_PASSWORD', ''); //xampp vaikimisi tühi
 define('DATABASE_DATABASE', 'testly');
 define('BASE_URL', '/testly/');
 define('DEFAULT_CONTROLLER', 'tests');
+define('ASSETS_URL', '/testly/assets/');
+

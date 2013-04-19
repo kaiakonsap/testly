@@ -20,22 +20,33 @@
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/main.js"></script>
 
+	<script>BASE_URL = '<?=BASE_URL?>'</script>
+	<? if (! empty($this->scripts)) : ?>
+		<? foreach ($this->scripts as $script) : ?>
+			<script src="<?= ASSETS_URL ?>js/<?= $script ?>"></script>
+		<? endforeach ?>
+	<? endif ?>
 	<style>
-		body
-		{
+		body {
 			padding-top: 60px;
 		}
-		body,html
-		{
-			background:url('<?=BASE_URL?>assets/img/back.jpg');
+
+		body, html {
+			background: url('<?=BASE_URL?>assets/img/back.jpg');
 			height: 100%;
 
 		}
-		table.table-bordered tr
-		{
+
+		table.table-bordered tr {
 			background-color: #f9f9f9;
-		} ;
+		}
+
+		;
 	</style>
 </head>
 <body>
@@ -65,11 +76,6 @@
 merge a view file with that name*/
 require '/views/'.$request->controller.'_'.$request->action.'_view.php';?>
 
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/main.js"></script>
 
 </body>
 </html>
