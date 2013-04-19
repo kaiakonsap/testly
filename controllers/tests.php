@@ -8,6 +8,7 @@ class tests
 
 	function index()
 	{
+		$this->scripts[]='tests.js';
 		$this->scripts[] = 'tests.js';
 		global $request;
 		global $_user;
@@ -17,6 +18,11 @@ class tests
 		require 'views/master_view.php';
 
 
+	}
+	function edit()
+	{
+		global $request;
+		require 'views/master_view.php';
 	}
 
 	function remove()
