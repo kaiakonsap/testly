@@ -8,7 +8,7 @@
 	<meta name="author" content="">
 
 	<!-- Le styles -->
-	<link href="../assets/css/main.css" rel="stylesheet">
+
 	<style type="text/css">
 		body {
 			padding-top: 40px;

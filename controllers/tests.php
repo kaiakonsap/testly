@@ -23,7 +23,11 @@ class tests
 	function edit()
 	{
 		global $request;
+		$id=$request->params[0];
+		$test=get_all("SELECT * FROM test WHERE test_id='$id'");
+		$test=$test[0];
 		require 'views/master_view.php';
+
 	}
 
 	function remove()

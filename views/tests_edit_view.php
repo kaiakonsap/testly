@@ -18,11 +18,22 @@
 
 <div id="tabs">
 	<ul>
-		<li><a href="#tabs-1">TEsti nimi</a></li>
+		<li><a href="#tabs-1">Testin</a></li>
 		<li><a href="#tabs-2">Proin dolor</a></li>
 		<li><a href="#tabs-3">Aenean lacinia</a></li>
 	</ul>
 	<div id="tabs-1">
+		<form method="POST">
+			<label>Küsimuse nimi</label>
+			<input type="test"name="name" value="<?=$test['name']?>">
+			<label>Sissejuhatus</label>
+
+			<textarea name="introduction"><?=$test['introduction']?></textarea>
+			<label>Kokkuvõte</label>
+			<textarea name="conclusion"><?=$test['conclusion']?></textarea>
+			<label>Passcode</label>
+			<input type="text"name="passcode"value="<?=$test['passcode']?>">
+		</form>
 	</div>
 	<div id="tabs-2">
 		<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
