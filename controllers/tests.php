@@ -13,7 +13,8 @@ class tests
 		global $request;
 		global $_user;
 		$tests = get_all("SELECT * FROM test NATURAL JOIN user WHERE test.deleted=0");
-
+		$id=$_SESSION['user_id'];
+		$status=get_one("SELECT status FROM user WHERE user_id='$id'");
 		//merge master view which decides which body to put
 		require 'views/master_view.php';
 
