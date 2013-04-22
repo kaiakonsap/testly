@@ -53,7 +53,7 @@
 				<input type="radio" name="tf.correct" value="1" >
 				<textarea name="answer.1">False</textarea>
 			</div>
-			<div id="type_id_2">
+			<div id="type_id_2" class="answer-template">
 
 				<label>Sisesta vastusevariandid ja märgi milline variant on õige</label>
 				<div id="multiple-choice-options">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 
-			<div id="type_id_4">
+			<div id="type_id_4" class="answer-template">
 				<label>Sisesta võimalikud vastusevariandid(üks vastus ühte kasti)</label>
 				<div id="fill-in-the-blank-answer-option">
 					<div class="answer-option">
