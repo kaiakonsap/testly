@@ -1,4 +1,4 @@
-<p><a class="btn btn-large btn-primary" href="https://www.google.ee">Lis uus test </a>
+<p><a class="btn btn-large btn-primary" href="<?BASE_URL?>tests/add">Lis uus test </a>
 </p>
 <table id="tests-table" class="table table-bordered table striped">
 	<thead>
