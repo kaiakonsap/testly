@@ -37,7 +37,7 @@
 	</div>
 	<div id="tabs-2">
 		<label>Küsimus</label>
-		<textarea name="question_text"><?=$test['question_text']?></textarea>
+		<textarea name="question_text"><?=$question['question_text']?$question['question_text']:''?></textarea>
 		<label>Tüüp</label>
 		<select name="type_id" id="type_id">
 			<option value="1">True/false</option>

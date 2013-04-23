@@ -13,7 +13,7 @@ function checkForm() {
 	return false;
 
 }
-$(document).ready(function () {
+$(function () {
 	$('#answer-template .answer-template').hide();
 	$('#type_id_' + current_type_id).show();
 	$('#type_id').bind('click change focus', function (event) {
