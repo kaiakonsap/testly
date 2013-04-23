@@ -25,9 +25,11 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<script src="<?= ASSETS_URL ?>/js/plugins.js"></script>
 	<script src="<?= ASSETS_URL ?>/js/main.js"></script>
-
+	<!-- have the BASE_URL variable of php be of the same value for javascript -->
 	<script>BASE_URL = '<?=BASE_URL?>'</script>
+	<!-- if my script array has members -->
 	<? if (! empty($this->scripts)) : ?>
+		<!-- for each piece of script have a new script source-->
 		<? foreach ($this->scripts as $script) : ?>
 			<script src="<?= ASSETS_URL ?>js/<?= $script ?>"></script>
 		<? endforeach ?>

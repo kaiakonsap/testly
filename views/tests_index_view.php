@@ -17,7 +17,10 @@
 				<a href="<?=BASE_URL?>tests/edit/<?=$test['test_id']?>">
 				<i class="icon-pencil"></i>
 				</a>
-		<?if (!empty($status)&&$status=='teacher'):?>
+
+				<!--if users status is not empty and is set to be teacher, then show me delete button and ask for delete
+				function-->
+				<?if (!empty($status)&&$status=='teacher'):?>
 				<a href="#" onclick="if(!confirm('Oled kindel?') )return false;
 					remove_test_ajax(<?= $test['test_id'] ?>);return false">
 					<i class="icon-trash"></i>Kustuta</a><?endif?>

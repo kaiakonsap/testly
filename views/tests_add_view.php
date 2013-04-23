@@ -1,16 +1,21 @@
+<!-- gives the forms so that user can add  test info-->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
+<!-- makes my tabs look like tabs in javascript -->
 <script>
 	$(function () {
 		$("#tabs").tabs();
 	});
 </script>
 
+<!-- huge tabs div and tab headlines -->
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Üldine</a></li>
 		<li><a href="#tabs-2">Mitteyld dolor</a></li>
 		<li><a href="#tabs-3">Kolmas</a></li>
 	</ul>
+
+	<!-- tab 1 that has form to fill in the general info -->
 	<div id="tabs-1">
 		<form method="post">
 			<label>Küsimuse nimi</label>
@@ -23,6 +28,8 @@
 			<input type="text" name="passcode" value="<?= $test['passcode'] ?>">
 		</form>
 	</div>
+
+	<!-- tab to fill in the question and the type of answer expected and the right one -->
 	<div id="tabs-2">
 		<label>Küsimus</label>
 		<textarea name="question_text"><?=$question['question_text'] ? $question['question_text'] : '' ?></textarea>
@@ -33,7 +40,6 @@
 			<option value="3">Mitu valikut</option>
 			<option value="4">Täida tühikud</option>
 		</select>
-
 		<div id="answer-template">
 			<div id="type_id_1" class="answer-template">
 				<label>Sisesta kaks vastust ja märgi ära õige vastus</label>
@@ -45,6 +51,7 @@
 			<div id="type_id_2" class="answer-template">
 				<label>Sisesta vastuse variandid ja märgi ära, milline variant on õige</label>
 
+				<!--  multiple-choice-options version-->
 				<div id="multiple-choice-options">
 					<div class="answer-option">
 						<input type="radio" name="mc.correct" value="0" checked="checked">
@@ -63,15 +70,15 @@
 						<textarea name="mc.answer.3"></textarea>
 					</div>
 				</div>
-
+				<!-- add or delete a choice cluster -->
 				<a href="#" onclick="return addMultipleChoice()">Add</a>/<a href="#" onclick="return removeMultipleChoice()
 				">remove</a>vastusevariant
-
-
 			</div>
+
 			<div id="type_id_3" class="answer-template">
 				<label>Sisesta vastuse variandid ja märgi ära, millised variandid on õiged</label>
 
+				<!--  multiple-response-answer-option version-->
 				<div id="multiple-response-answer-option">
 					<div class="answer-option">
 						<input type="checkbox" name="mr.correct" value="1">
@@ -95,7 +102,7 @@
 			</div>
 			<div id="type_id_4" class="answer-template">
 				<label>Sisesta võimalikud vastuse variandid(Üks vastus ühte kasti)</label>
-
+				<!--  fill-in-the-blank-answer-option version-->
 				<div id="fill-in-the-blank-answer-option">
 					<div class="answer-option">
 						<input type="checkbox" name="fitb.correct" checked="checked" disabled="true">
