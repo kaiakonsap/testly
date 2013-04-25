@@ -21,7 +21,7 @@
 			<label>Küsimuse nimi</label>
 			<input type="text" name="name" value="<?= $test['name'] ?>">
 			<label>Sissejuhatus</label>
-			<textarea name="introduction"><?= $test['introduction'] ?></textarea>
+			<textarea name="introduction"><??></textarea>
 			<label>Kokkuvõte</label>
 			<textarea name="conclusion"><?= $test['conclusion'] ?></textarea>
 			<label>Passcode</label>
@@ -50,7 +50,9 @@
 			</div>
 			<div id="type_id_2" class="answer-template">
 				<label>Sisesta vastuse variandid ja märgi ära, milline variant on õige</label>
-
+				<!-- add or delete a choice cluster -->
+				<a href="#" onclick="return addMultipleChoice()">Add</a>/<a href="#" onclick="return removeMultipleChoice()
+				">remove</a> vastusevariant
 				<!--  multiple-choice-options version-->
 				<div id="multiple-choice-options">
 					<div class="answer-option">
@@ -70,14 +72,14 @@
 						<textarea name="mc.answer.3"></textarea>
 					</div>
 				</div>
-				<!-- add or delete a choice cluster -->
-				<a href="#" onclick="return addMultipleChoice()">Add</a>/<a href="#" onclick="return removeMultipleChoice()
-				">remove</a>vastusevariant
+
 			</div>
 
 			<div id="type_id_3" class="answer-template">
 				<label>Sisesta vastuse variandid ja märgi ära, millised variandid on õiged</label>
-
+				<!-- add or delete a choice cluster -->
+				<a href="#" onclick="return addMultipleResponse()">Add</a>/<a href="#" onclick="return removeMultipleResponse()
+				">remove</a> vastusevariant
 				<!--  multiple-response-answer-option version-->
 				<div id="multiple-response-answer-option">
 					<div class="answer-option">
@@ -97,8 +99,7 @@
 						<textarea name="mr.answer.3"></textarea>
 					</div>
 				</div>
-				<a href="#" onclick="return addMultipleResponse()">Add</a>/<a href="#" onclick="return removeMultipleResponse()
-				">remove</a>vastusevariant
+
 			</div>
 			<div id="type_id_4" class="answer-template">
 				<label>Sisesta võimalikud vastuse variandid(Üks vastus ühte kasti)</label>
@@ -109,8 +110,7 @@
 						<textarea name="fitb.answer.0"></textarea>
 					</div>
 				</div>
-				<a href="#" onclick="return_addMultipleChoice()">Add</a>/<a href="#" onclick="return_removeMultipleChoice()
-				">remove</a><p> vastusevariant</p>
+
 			</div>
 		</div>
 	</div>

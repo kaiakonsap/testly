@@ -62,13 +62,13 @@ class tests
 		$result = q("UPDATE test SET deleted=1 WHERE test_id='$id'");
 		require 'views/master_view.php';
 	}
-//gives an empty template
+//makes possible to add a new test
 	function add()
 	{
 		global $request;
-		//add javascript
+		//javascript
 		$this->scripts[] = 'test_add_edit.js';
-		//make new empty array for test info
+		//Fills array elements with empty strings for some reason
 		$test = array(
 			'test_id'       => '',
 			'name'          => '',
@@ -77,7 +77,8 @@ class tests
 			'passcode'      => '',
 			'question_text' => ''
 		);
-		//new empty array for test answers
+
+		//new empty array for test answers for some reason
 		$question = array('question_text' => '');
 		require 'views/master_view.php';
 
