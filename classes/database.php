@@ -19,17 +19,17 @@ function q($sql, &$query_pointer = NULL, $debug = FALSE)
 
 	/*take first 4 letters of my query and in case SELE(ct) return number of query rows, in case INSE(rt) return the key,
 else just return affected rows*/
-	switch (substr($sql, 0, 4)) {
+	/*switch (substr($sql, 0, 4)) {
 		case 'SELE':
 			return mysql_num_rows($query_pointer);
 		case 'INSE':
 			return mysql_insert_id();
 		default:
 			return mysql_affected_rows();
-	}
+	}*/
 }
 
-//this function makes sure if my mysql query had any results, it gets a query data from auth.php
+//this function makes a query using $sql and returns only one row
 function get_one($sql, $debug = FALSE)
 {
 	if ($debug) {
@@ -47,7 +47,7 @@ function get_one($sql, $debug = FALSE)
 	return (is_array($result)) && count($result) > 0 ? $result[0] : NULL;
 }
 
-//make query, save into variable?????????????????
+//this function makes a query using $sql and returns array that has an array inside it
 function get_all($sql)
 {
 	$q = mysql_query($sql) or exit(mysql_error());
