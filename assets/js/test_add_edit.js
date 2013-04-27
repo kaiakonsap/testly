@@ -5,11 +5,11 @@ function addMultipleChoice(){
 	//save html elements to a variable
 	var html='<div class="answer-option"><input type="radio" name="mc.correct" value="<id>">&nbsp;<textarea name="mc.answer.<id>"></textarea></div>'
 	//count how many textarea elements there is in #multiple-choice-options
-	var id=$('#multiple-choice-option textarea').length;
+	var id=$('#multiple-choice-options textarea').length;
 	//replaces the <id> element in html with new value
 	html=html.replace(/<id>/g,id+1);
 	// search for element with id #multiple-choice-option and append it new_html
-	$('#multiple-choice-option').append(html);
+	$('#multiple-choice-options').append(html);
 	return false;
 }
 function addMultipleResponse(){
@@ -23,8 +23,8 @@ function addMultipleResponse(){
 function removeMultipleChoice(){
 	//if there is more than one textarea element in #multiple-choice-option
 	// then take the last answer-option class element and remove it
-	if($('#multiple-choice-option textarea').length>1){
-		$('#multiple-choice-option .answer-option:last').remove();
+	if($('#multiple-choice-options textarea').length>1){
+		$('#multiple-choice-options .answer-option:last').remove();
 	}
 	return false;
 }

@@ -17,13 +17,16 @@ function remove_test_ajax(id) {
 }
 
 $(document).ready(function(){
-
+//when html element with id add_test clicked
 	$('#add_test').click(function(){
+		//saves the first #add_test element of #confirmOverlay
 		var elem = $(this).closest('#confirmOverlay');
 
+//popup  menu
 		$.confirm({
-			'title'		: 'Delete Confirmation',
-			'message'	: 'You are about to delete this item. <br />It cannot be restored at a later time! Continue?',
+			'title'		: 'Confirmation',
+			'message'	: 'Alusta uue testi loomist<br />Lisa Nimi',
+			//buttons, salvesta returns POST entered
 			'buttons'	: {
 				'Salvesta'	: {
 					'class'	: 'blue',
@@ -41,7 +44,7 @@ $(document).ready(function(){
 				'Loobu': {
 					'class':'gray',
 					'action': function (){}
-		// Nothing to do in this case. You can as well omit the action property.
+		// hides the window
 				}
 			}
 		});
@@ -65,31 +68,33 @@ $(document).ready(function(){
 			// Generating the markup for the buttons:
 
 			buttonHTML += '<a href="#" class="button '+obj['class']+'">'+name+'<span></span></a>';
-
+// MA EI TEE JU MITTEMIDAGI SIIN??
 			if(!obj.action){
 				obj.action = function(){};
 			}
 		});
-
+	//save a string out of array with html elements
 		var markup = [
 			'<div id="confirmOverlay">',
 			'<div id="confirmBox">',
 			'<h1>',params.title,'</h1>',
-			'<input name="test_name" type="text">',
 			'<p>',params.message,'</p>',
+			'<input name="test_name" type="text">',
 			'<div id="confirmButtons">',
 			buttonHTML,
 			'</div></div></div>'
 		].join('');
-
+	//alert(markup.text('input').val());
+		//hide my elements and append to html body, fade in
 		$(markup).hide().appendTo('body').fadeIn();
-
+//buttons=+ i ?????
 		var buttons = $('#confirmBox .button'),
 			i = 0;
 
-		$.each(params.buttons,function(name,obj){
-			buttons.eq(i++).click(function(){
-
+		$.each(params.buttons,function(name,obj)
+		{
+			buttons.eq(i++).click(function()
+			{
 				// Calling the action attribute when a
 				// click occurs, and hiding the confirm.
 
@@ -100,7 +105,7 @@ $(document).ready(function(){
 		});
 	};
 
-
+//function that hides and removes the div
 	$.confirm.hide = function (){
 		$('#confirmOverlay').fadeOut(function(){
 			$(this).remove();

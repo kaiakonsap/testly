@@ -14,7 +14,7 @@
 	background:url('../../assets/img/body_bg.jpg') repeat-x left bottom #e5e5e5;
 	width:460px;
 	position:fixed;
-	left:50%;
+	left:60%;
 	top:50%;
 	margin:-130px 0 0 -230px;
 	border: 1px solid rgba(33, 33, 33, 0.6);
@@ -28,9 +28,10 @@
 	margin: 0;
 	font:26px/1 'Cuprum','Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	background:url('../../assets/img/header_bg.jpg') repeat-x left bottom #f5f5f5;
-	padding: 18px 25px;
+	padding: 18px 25px 5px 25px;
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
 	color:#666;
+
 }
 
 #confirmBox h1{
@@ -74,6 +75,11 @@
 	background:url('../../assets/img/buttons.png') no-repeat;
 	width:5px;
 	height:33px
+}
+#confirmBox input{
+	margin-bottom: 3%;
+	margin-left:30%;
+	background:gainsboro;
 }
 
 #confirmBox .blue{				background-position:left top;text-shadow:1px 1px 0 #5889a2;}
